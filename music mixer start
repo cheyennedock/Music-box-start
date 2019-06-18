@@ -1,0 +1,36 @@
+(() = {
+  console.log('fired!');
+
+  let ausioEl = document.querySelector('audio'),
+  pauseButton = document.querySelector('#pause'),
+  playButton = document.querySelector("#play");
+
+
+  function pauseAudio() {
+    audioEl.pause = true;
+  }
+  function playAudio() {
+    audioEl.play();
+  }
+
+  funtion logEnded(){
+    console.log("done!");
+
+    // run more funcitonality
+   }
+
+   function loadAudioTrack(){
+     audioEl.src = "audio/STP_Interstate_Love_Song.mp3";
+
+     // load it and play it
+     audioEl.load();
+     audioEl.play();
+   }
+
+   audioEl.addEventListener("ended", logEnded);
+   PauseButton.addEventListener("click", pauseAudio);
+   playButton.addEventListener("click", playAudio);
+   loadButton.addEventListener("click", loadAudioTrack);
+
+
+}
